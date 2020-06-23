@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/game_piece_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:id="@+id/imageO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/o" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.churdmidterm.AspectRatioView
+            android:id="@+id/aspectRatioView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintHorizontal_bias="0.5"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="#100F0F"
+            custom:columnCount="3"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            custom:rowCount="3">
+
+            <ImageView
+                android:id="@+id/topleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/topcenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/topright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/middleleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/middlecenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/middleright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/bottomleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/bottomcenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+
+            <ImageView
+                android:id="@+id/bottomright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                custom:srcCompat="@drawable/blank" />
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
